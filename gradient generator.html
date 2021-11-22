@@ -3,77 +3,17 @@
 <head>
     <title>Gradients generator</title>
     <meta charset="utf-8">
-
-    <style>
-        :root {
-            --button_border_raduis: 12px;
-        }
-
-        body {
-            background: linear-gradient(var(--color_top), var(--color_bottom));
-            height: 100%;
-            display: grid;
-            place-items: center;
-            grid-template-rows: 15% 70% 15%;
-        }
-
-        button {
-            background-color: rgba(0, 0, 0, 0.12);
-            color: white;
-            border: none;
-            border-radius: var(--button_border_raduis);
-            padding: 16px 32px;
-            font-size: 1em;
-            font-weight: 600;
-            transition-duration: 300ms;
-        }
-
-        button:hover {
-            background-color: rgba(0, 0, 0, 0.16);
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.08), 0 6px 20px 0 rgba(0,0,0,0.19);
-        }
-
-        button:active {
-            background-color: rgba(0, 0, 0, 0.28);
-            box-shadow: 0 1px 4px 0 rgba(0,0,0,0.08), 0 1px 2px 0 rgba(0,0,0,0.1);
-            transform: scale(90%);
-        }
-
-        .hex_value {
-            font-family: monospace;
-            color: hsla(0, 0%, 100%, 0.8);
-            text-transform: lowercase;
-            font-size: 1.2em;
-        }
-
-    </style>
-
-    <script>
-        var r = document.querySelector(':root');
-
-        // Create a function for setting a variable value
-        function myFunction_set() {
-            var randomColor_top = '#' + Math.floor(Math.random() * 16777215).toString(16);
-            var randomColor_bottom = '#' + Math.floor(Math.random() * 16777215).toString(16);
-            r.style.setProperty('--color_top', randomColor_top);
-            r.style.setProperty('--color_bottom', randomColor_bottom);
-            console.log("Top color: " + randomColor_top + "; Bottom color: " + randomColor_bottom)
-
-            // Show hex-code colors in HTML
-            color_value_top.innerHTML = randomColor_top;
-            color_value_bottom.innerHTML = randomColor_bottom;
-        }
-
-        myFunction_set();
-
-    </script>
-
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <span alt="First color in gradient" class="hex_value" id="color_value_top">Value 1</span>
-    <button alt="Generate random color" type="button" onclick="myFunction_set()">Make gradient</button>
-    <span alt="Second color in gradient" class="hex_value" id="color_value_bottom">Value 2</span>
+    <span alt="First color in gradient" class="hex_value" id="color_value_top"></span>
+    <button alt="Generate random color" type="button" onclick="createGradient()">Make gradient</button>
+    <span alt="Second color in gradient" class="hex_value" id="color_value_bottom"></span>
+    <script>
+        createGradient();
+    </script>
 </body>
 
 </html>
