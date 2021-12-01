@@ -11,3 +11,8 @@ function createGradient() {
     color_value_top.innerHTML = randomColor_top;
     color_value_bottom.innerHTML = randomColor_bottom;
 }
+
+// Click on Hex value for copy value
+function copyHexValue(id) {
+    navigator.clipboard.writeText(document.getElementById(id).textContent);
+}
