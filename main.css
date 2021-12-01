@@ -4,7 +4,6 @@
 
 body {
     background: linear-gradient(var(--color_top), var(--color_bottom));
-    height: 100%;
     display: grid;
     place-items: center;
     grid-template-rows: 15% 70% 15%;
@@ -37,4 +36,11 @@ button:active {
     color: hsla(0, 0%, 100%, 0.8);
     text-transform: lowercase;
     font-size: 1.2em;
+}
+
+.hex_click_zone {
+    width: 35%;
+    height: 100px;
+    display: grid;
+    place-items: center;
 }
