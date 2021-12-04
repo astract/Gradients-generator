@@ -13,13 +13,19 @@ function createGradient() {
 
 // Click on Hex value for copy value
 function copyHexValue(id) {
-    navigator.clipboard.writeText(document.getElementById(id).textContent);
-    // Save current hex value
-    let setValue = document.getElementById(id).textContent;
-
-    //  Show text "Copied" after click and return current hex value
-    document.getElementById(id).innerHTML = "Copied";
-    setTimeout(function () {
-        document.getElementById(id).innerHTML = setValue;
-    }, 300);
+    navigator.clipboard.writeText(document.getElementById(id).textContent)
+        .then(() => {
+            let setValue = document.getElementById(id).textContent;
+            document.getElementById(id).innerHTML = "Copied";
+            setTimeout(function () {
+                document.getElementById(id).innerHTML = setValue;
+            }, 300);
+        })
+        .catch(err => {
+            let setValue = document.getElementById(id).textContent;
+            document.getElementById(id).innerHTML = "Ooops.. Please retry";
+            setTimeout(function () {
+                document.getElementById(id).innerHTML = setValue;
+            }, 1000);
+        });
 }
