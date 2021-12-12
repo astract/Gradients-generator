@@ -28,6 +28,9 @@ function createGradient() {
 
     root.style.setProperty('--color_top', ('#' + arrayColors[0]));
     root.style.setProperty('--color_bottom', ('#' + arrayColors[1]));
+
+    color_value_top.innerHTML = arrayColors[0];
+    color_value_bottom.innerHTML = arrayColors[1];
 }
 
 // Click on Hex value for copy value
