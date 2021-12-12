@@ -1,14 +1,41 @@
 // Create a function for make gradient
 function createGradient() {
-    var r = document.querySelector(':root');
-    var randomColor_top = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    var randomColor_bottom = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    r.style.setProperty('--color_top', randomColor_top);
-    r.style.setProperty('--color_bottom', randomColor_bottom);
+    let root = document.querySelector(':root');
 
-    // Show hex-code colors in HTML
-    color_value_top.innerHTML = randomColor_top;
-    color_value_bottom.innerHTML = randomColor_bottom;
+    let rColor; // Red color
+    let gColor; // Green color
+    let bColor; // Blue color
+    let arrayColors = []; // array for save two color values
+
+    for (let i = 0; i < 2; i++) {
+        // generate random value for RGB system in 16 code system
+        rColor = Math.floor(Math.random() * 255).toString(16);
+        gColor = Math.floor(Math.random() * 255).toString(16);
+        bColor = Math.floor(Math.random() * 255).toString(16);
+
+        console.log('rColor ' + rColor);
+        console.log('gColor ' + gColor);
+        console.log('bColor ' + bColor);
+
+        // check color value on one symbols and add 0 before
+        if (rColor.length == 1) {
+            rColor = 0 + rColor;
+        } 
+        
+        if (gColor.length == 1) {
+            gColor = 0 + gColor;
+        }
+        
+        if (bColor.length == 1) {
+            bColor = 0 + bColor;
+        }
+
+        arrayColors.push(rColor + gColor + bColor);
+        console.log(arrayColors);
+    }
+
+    root.style.setProperty('--color_top', ('#' + arrayColors[0]));
+    root.style.setProperty('--color_bottom', ('#' + arrayColors[1]));
 }
 
 // Click on Hex value for copy value
