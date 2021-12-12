@@ -16,9 +16,13 @@ function createGradient() {
         // check color value on one symbols and add 0 before
         if (rColor.length == 1) {
             rColor = 0 + rColor;
-        } else if (gColor.length == 1) {
+        }
+        
+        if (gColor.length == 1) {
             gColor = 0 + gColor;
-        } else if (bColor.length == 1) {
+        }
+        
+        if (bColor.length == 1) {
             bColor = 0 + bColor;
         }
 
