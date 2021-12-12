@@ -38,6 +38,10 @@ button:active {
     font-size: 1.2em;
 }
 
+.hex_value::before {
+    content: '#';
+}
+
 .hex_click_zone {
     width: 35%;
     height: 100px;
