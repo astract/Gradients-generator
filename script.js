@@ -13,20 +13,12 @@ function createGradient() {
         gColor = Math.floor(Math.random() * 255).toString(16);
         bColor = Math.floor(Math.random() * 255).toString(16);
 
-        console.log('rColor ' + rColor);
-        console.log('gColor ' + gColor);
-        console.log('bColor ' + bColor);
-
         // check color value on one symbols and add 0 before
         if (rColor.length == 1) {
             rColor = 0 + rColor;
-        } 
-        
-        if (gColor.length == 1) {
+        } else if (gColor.length == 1) {
             gColor = 0 + gColor;
-        }
-        
-        if (bColor.length == 1) {
+        } else if (bColor.length == 1) {
             bColor = 0 + bColor;
         }
 
