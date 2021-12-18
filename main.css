@@ -1,9 +1,9 @@
 :root {
     --button_border_raduis: 12px;
+    background: linear-gradient(var(--color_top), var(--color_bottom));
 }
 
 body {
-    background: linear-gradient(var(--color_top), var(--color_bottom));
     display: grid;
     place-items: center;
     grid-template-rows: 15% 70% 15%;
@@ -15,9 +15,10 @@ button {
     border: none;
     border-radius: var(--button_border_raduis);
     padding: 16px 32px;
-    font-size: 1em;
+    font-size: 16px;
     font-weight: 600;
     transition-duration: 300ms;
+    font-family: monospace; 
 }
 
 button:hover {
@@ -35,7 +36,7 @@ button:active {
     font-family: monospace;
     color: hsla(0, 0%, 100%, 0.8);
     text-transform: lowercase;
-    font-size: 1.2em;
+    font-size: 16px;
 }
 
 .hex_value::before {
@@ -47,4 +48,16 @@ button:active {
     height: 100px;
     display: grid;
     place-items: center;
+}
+
+.buttonWithCaption {
+    display: grid;
+    place-items: center;
+}
+
+.captionForButton {
+    margin-top: 20px;
+    font-family: monospace;
+    font-size: 13px;
+    color: hsla(0, 0%, 100%, 0.6);
 }
