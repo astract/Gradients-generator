@@ -13,7 +13,7 @@
     </div>
     <div class="buttonWithCaption">
         <button alt="Generate random color" type="button" onclick="createGradient()">Generate other</button>
-        <span class="captionForButton">Click me! Or just press "Space" button</span>
+        <span class="captionForButton">Click button or just press "Space" button</span>
     </div>
     <div onclick="copyHexValue('color_value_bottom')" class="hex_click_zone">
         <span alt="Second color in gradient" class="hex_value" id="color_value_bottom"></span>
@@ -25,7 +25,6 @@
         window.addEventListener('keydown', function(createGradientBySpace) {
             if (createGradientBySpace.keyCode == 32) {
                 createGradient();
-                console.log('Space pressed');
             }
         })
     </script>
