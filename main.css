@@ -60,4 +60,5 @@ button:active {
     font-family: monospace;
     font-size: 13px;
     color: hsla(0, 0%, 100%, 0.6);
+    text-align: center;
 }

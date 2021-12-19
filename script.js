@@ -1,5 +1,5 @@
 // Create a function for make gradient for background
-function createGradient() {
+function createGradientByRGB() {
     let root = document.querySelector(':root');
 
     let rColor; // Red color
@@ -12,8 +12,6 @@ function createGradient() {
         rColor = Math.floor(Math.random() * 255).toString(16);
         gColor = Math.floor(Math.random() * 255).toString(16);
         bColor = Math.floor(Math.random() * 255).toString(16);
-
-        console.log('Red: ' + rColor + ';', 'Green: ' + gColor + ';', 'Blue: ' + bColor);
 
         // check color value on one symbols and add 0 before
         if (rColor.length == 1) {
