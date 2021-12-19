@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <script src="script.js"></script>
     <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -12,19 +13,19 @@
         <span alt="First color in gradient" class="hex_value" id="color_value_top"></span>
     </div>
     <div class="buttonWithCaption">
-        <button alt="Generate random color" type="button" onclick="createGradient()">Generate other</button>
+        <button alt="Generate random color" type="button" onclick="createGradientByRGB()">Generate other</button>
         <span class="captionForButton">Click button or just press "Space" button</span>
     </div>
     <div onclick="copyHexValue('color_value_bottom')" class="hex_click_zone">
         <span alt="Second color in gradient" class="hex_value" id="color_value_bottom"></span>
     </div>
     <script>
-        createGradient();
+        createGradientByRGB();
 
         // Generate gradient by click "space" button
         window.addEventListener('keydown', function(createGradientBySpace) {
             if (createGradientBySpace.keyCode == 32) {
-                createGradient();
+                createGradientByRGB();
             }
         })
     </script>
