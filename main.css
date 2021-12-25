@@ -39,24 +39,28 @@ button:active {
     font-size: 16px;
 }
 
-.hex_value::before {
+.hex_click_zone:hover {
+    opacity: 60%;
+}
+
+.hex_value:before {
     content: '#';
 }
 
 .hex_click_zone {
-    width: 35%;
-    height: 100px;
+    width: 28%;
     display: grid;
-    place-items: center;
+    grid-gap: 8px;
+    justify-items: center;
 }
 
 .buttonWithCaption {
     display: grid;
     place-items: center;
+    grid-gap: 16px;
 }
 
-.captionForButton {
-    margin-top: 20px;
+.caption {
     font-family: monospace;
     font-size: 13px;
     color: hsla(0, 0%, 100%, 0.6);
