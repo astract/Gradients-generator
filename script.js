@@ -55,3 +55,27 @@ function copyHexValue(id) {
             }, 1000);
         });
 }
+
+/*
+function createGradientByHSL() {
+    let root = document.querySelector(':root');
+
+    let hue;
+    let saturation;
+    let lightness;
+    let arrayColors = []; // array for save two color values
+
+    for (let i = 0; i < 2; i++) {
+        hue = Math.floor(Math.random() * 359);
+        saturation = Math.floor(Math.random() * 100);
+        lightness = Math.floor(Math.random() * 100);
+        arrayColors.push(hue + ', ' + saturation + '%, ' + lightness + '%')
+    }
+
+    root.style.setProperty('--color_top', ('hsl(' + arrayColors[0] + ')'));
+    root.style.setProperty('--color_bottom', ('hsl(' + arrayColors[1] + ')'));
+
+    color_value_top.innerHTML = "hsl(" + arrayColors[0] + ")";
+    color_value_bottom.innerHTML = "hsl(" + arrayColors[1] + ")";
+}
+*/
