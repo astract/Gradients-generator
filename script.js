@@ -56,7 +56,6 @@ function copyHexValue(id) {
         });
 }
 
-/*
 function createGradientByHSL() {
     let root = document.querySelector(':root');
 
@@ -78,4 +77,3 @@ function createGradientByHSL() {
     color_value_top.innerHTML = "hsl(" + arrayColors[0] + ")";
     color_value_bottom.innerHTML = "hsl(" + arrayColors[1] + ")";
 }
-*/
