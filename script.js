@@ -80,3 +80,10 @@ function generateHEXCode() {
 
   return (hexCode = redColor + greenColor + blueColor);
 }
+
+function test2() {
+  let pastColor1 = "";
+  console.log("было " + pastColor1);
+  pastColor1 = generateHEXCode();
+  console.log("стало " + pastColor1);
+}

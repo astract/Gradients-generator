@@ -49,13 +49,15 @@
                 "функция generateHEXCode() вернула 2 значение = " +
                     generateHEXCode(),
             );
+            test2();
 
             // Generate gradient by click "space" button
             window.addEventListener(
                 "keydown",
                 function (createGradientBySpace) {
                     if (createGradientBySpace.keyCode == 32) {
-                        createGradientByRGB();
+                        // createGradientByRGB();
+                        test2();
                     }
                 },
             );
