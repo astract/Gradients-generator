@@ -60,14 +60,5 @@ function copyHexValue(id) {
 // функция возвращает хекс код
 function generateHexColor() {
   let hexColor = "#" + Math.floor(Math.random() * 16777216).toString(16);
-  // проверка если хекс будет не шестизначный
-  if (hexColor.length == 1) {
-    hexColor = 0 + hexColor;
-  }
   return hexColor;
-}
-
-function func1() {
-  var var1 = generateHexColor();
-  console.log("func1 " + var1);
 }
