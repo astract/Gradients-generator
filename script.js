@@ -67,19 +67,16 @@ function generateHEXCode() {
   if (redColor.length == 1) {
     redColor = 0 + redColor;
   }
-  console.log("redColor " + redColor);
 
   greenColor = Math.floor(Math.random() * 255).toString(16);
   if (greenColor.length == 1) {
     greenColor = 0 + greenColor;
   }
-  console.log("greenColor " + greenColor);
 
   blueColor = Math.floor(Math.random() * 255).toString(16);
   if (blueColor.length == 1) {
     blueColor = 0 + blueColor;
   }
-  console.log("blueColor " + blueColor);
 
   return (hexCode = redColor + greenColor + blueColor);
 }
