@@ -39,25 +39,13 @@
         </div>
         <script>
             createGradientByRGB();
-            generateHEXCode();
-            console.log(
-                "функция generateHEXCode() вернула 1 значение = " +
-                    generateHEXCode(),
-            );
-            generateHEXCode();
-            console.log(
-                "функция generateHEXCode() вернула 2 значение = " +
-                    generateHEXCode(),
-            );
-            test2();
 
             // Generate gradient by click "space" button
             window.addEventListener(
                 "keydown",
                 function (createGradientBySpace) {
                     if (createGradientBySpace.keyCode == 32) {
-                        // createGradientByRGB();
-                        test2();
+                        createGradientByRGB();
                     }
                 },
             );
