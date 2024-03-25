@@ -35,6 +35,7 @@ function createGradientByRGB() {
 
   color_value_top.innerHTML = arrayColors[0];
   color_value_bottom.innerHTML = arrayColors[1];
+  return arrayColors; // возвращает два хекс значения
 }
 
 // Click on Hex value for copy value
