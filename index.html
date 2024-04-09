@@ -20,7 +20,7 @@
             <button
                 alt="Generate random color"
                 type="button"
-                onclick="createGradientByRGB()"
+                onclick="applyColorsToCSS()"
             >
                 Generate
             </button>
@@ -44,7 +44,7 @@
                 "keydown",
                 function (createGradientBySpace) {
                     if (createGradientBySpace.keyCode == 32) {
-                        createGradientByRGB();
+                        applyColorsToCSS();
                     }
                 },
             );
